@@ -16,11 +16,11 @@ int main()
  struct msqid_ds buf;
  int id;
 
- id = msgget(55, IPC_CREAT|0644);
+ id = msgget(60, IPC_CREAT|0644);
  printf("id: %d\n", id);
 
- v.mtype=25;
- strcpy(v.data, "amey");
+ v.mtype=30;
+ strcpy(v.data, "Aish");
  msgsnd(id, &v, strlen(v.data)+1, 0);
 
  msgctl(id, IPC_STAT, &buf);
